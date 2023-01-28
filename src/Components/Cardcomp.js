@@ -9,8 +9,12 @@ import { Link } from "react-router-dom";
 
 export default function MediaCard(props) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia sx={{ height: 140 }} image={props.img} title="green iguana" />
+    <Card sx={{ maxWidth: 345, borderRadius: { lg: 5, xs: 2 } }}>
+      <CardMedia
+        sx={{ height: 170, objectFit: "fill" }}
+        image={props.img}
+        title="green iguana"
+      />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {props.title}...

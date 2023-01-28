@@ -5,14 +5,15 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
-import Toggl from "./Toggl";
 
 export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
-        position="static"
-        sx={{ backgroundColor: "rgba(86, 127, 213, 0.805)" }}
+        sx={{
+          background: "rgba(0,0,0,0.8)",
+          backdropFilter: "saturate(180%) blur(10px)",
+        }}
       >
         <Toolbar>
           <IconButton
@@ -30,7 +31,6 @@ export default function ButtonAppBar() {
           >
             News_Menia
           </Typography>
-          <Toggl />
         </Toolbar>
       </AppBar>
     </Box>

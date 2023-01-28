@@ -1,3 +1,23 @@
 body{
-    background-color: rgba(0, 0, 0, 0.767);
+    background-image: url(./Assets/images/forth.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: pan 10s infinite alternate linear;
 }
+@keyframes pan {
+    100% {background-position-x: 15% ,50%;}
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #090538;
+    
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(13, 219, 251);
+  }
