@@ -1,12 +1,20 @@
-import { BrowserRouter as Routers, Routes, Route } from "react-router-dom";
-import Header2 from "./Components/Header";
+import Appbar from "./Components/Appbar";
+import Allnews from "./Components/Allnews";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Nav from "./Components/Nav";
+import Tesla from "./Components/Tesla";
 
 function App() {
   return (
     <>
-      <Routers>
-        <Header2 />
-      </Routers>
+      <BrowserRouter>
+        <Appbar />
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Allnews />} />
+          <Route path="/tesla" element={<Tesla />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
