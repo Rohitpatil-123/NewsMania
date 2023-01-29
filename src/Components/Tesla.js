@@ -14,7 +14,7 @@ function Tesla() {
 
   const getPriceData = async () => {
     const res = await fetch(
-      "https://newsapi.org/v2/everything?q=tesla&from=2022-12-27&sortBy=publishedAt&apiKey=8b05662c880742d7a0d11187509b9b86"
+      "https://newsapi.org/v2/everything?q=apple&from=2023-01-28&to=2023-01-28&sortBy=popularity&apiKey=8b05662c880742d7a0d11187509b9b86"
     );
     const actualdata = await res.json();
     setData(actualdata.articles);
