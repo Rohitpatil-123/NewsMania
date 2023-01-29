@@ -12,7 +12,7 @@ function Footer() {
         textAlign: "center",
       }}
     >
-      @newsmaina 2023
+      @RP_WEB 2023
     </Box>
   );
 }
