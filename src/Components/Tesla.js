@@ -1,31 +1,32 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Cardcomp from "./Cardcomp";
 import { Grid, Toolbar } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Paginationext from "./Paginationext";
+import Records from "../Data/records.json";
 
 function Tesla() {
-  const [dataw, setData] = useState([]);
+  // const [dataw, setData] = useState([]);
   const [searchTitle, setSearchTitle] = useState("");
   const [currentpage, setCurrentpage] = useState(1);
   const [postperpage, setPostperpage] = useState(24);
 
-  const getPriceData = async () => {
-    const res = await fetch(
-      "https://newsapi.org/v2/everything?q=apple&from=2023-01-28&to=2023-01-28&sortBy=popularity&apiKey=8b05662c880742d7a0d11187509b9b86"
-    );
-    const actualdata = await res.json();
-    setData(actualdata.articles);
-  };
+  // const getPriceData = async () => {
+  //   const res = await fetch(
+  //     "https://newsapi.org/v2/everything?q=apple&from=2023-01-28&to=2023-01-28&sortBy=popularity&apiKey=8b05662c880742d7a0d11187509b9b86"
+  //   );
+  //   const actualdata = await res.json();
+  //   setData(actualdata.articles);
+  // };
   const lastpostindex = currentpage * postperpage;
   const firstpostindex = lastpostindex - postperpage;
-  const data = dataw.slice(firstpostindex, lastpostindex);
+  const data = Records.slice(firstpostindex, lastpostindex);
 
-  useEffect(() => {
-    getPriceData();
-  }, []);
+  // useEffect(() => {
+  //   getPriceData();
+  // }, []);
 
   return (
     <>
@@ -88,7 +89,7 @@ function Tesla() {
           })}
       </Grid>
       <Paginationext
-        totalpost={dataw.length}
+        totalpost={Records.length}
         postperpage={postperpage}
         setCurrentpage={setCurrentpage}
       />
